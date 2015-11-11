@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class PrintTimeInterval
+{ public static void main(String[] args)
+  { Scanner c=new Scanner(System.in);
+    int minutesPerHour=60;
+    System.out.print("primo orario: ");
+    int first=c.nextInt();
+    System.out.print("secondo orario: ");
+    int second=c.nextInt();
+    int hours1=first/100;
+    int minutes1=first%100 + hours1*minutesPerHour;
+    int hours2=second/100;
+    int minutes2=second%100 + hours2*minutesPerHour;
+    
+    int diff= minutes2-minutes1;
+    int hours=diff/minutesPerHour;
+    int minutes=diff%minutesPerHour;
+    System.out.print("Tempo trascorso: ");
+    System.out.print(hours);
+    System.out.print(" ore e ");
+    System.out.print(minutes);
+    System.out.println(" minuti");
+  }
+}
+
