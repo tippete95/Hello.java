@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class SomeNumbers
+{	public static void main(String[] args)
+	{	Scanner in = new Scanner(System.in);
+		int count = 0;
+		double sum = 0;
+		double sumOfAbs = 0;
+		double product = 1;
+
+		System.out.println("Inserire sequenza di numeri: ");
+		
+		while (in.hasNextDouble())
+		{	double nextDouble = in.nextDouble();
+			sum = sum + nextDouble;
+			sumOfAbs = sumOfAbs + Math.abs(nextDouble);
+			product = product * nextDouble;
+			count++;
+		}
+		if (count < 2)
+			System.out.println("Inserire almeno due numeri");
+		else
+			 {	System.out.println("Somma: " + sum);
+ 				System.out.println("Somma dei valori assoluti: " + sumOfAbs);
+				System.out.println("Prodotto: " + product);
+				System.out.println("Valore medio : " + sum / count);
+			 }
+	}
+}
+		
