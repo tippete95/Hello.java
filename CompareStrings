@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class CompareStrings
+{	public static void main(String[] args)
+	{	Scanner in = new Scanner(System.in);
+		System.out.println("Introdurre la prima stringa:");
+		String s1 = in.nextLine();
+		System.out.println("Introdurre la seconda stringa:");
+		String s2 = in.nextLine();
+		
+		boolean firstIsBeforeSecond = false;
+		int i = 0;
+		int l;
+		int k = 0;
+		
+		if	( s1.length() - s2.length() < 0 )
+			{	firstIsBeforeSecond = true;
+				l = s1.length();
+			}
+		else 
+			{	firstIsBeforeSecond = false;
+				l = s2.length();
+			}
+		while	( i < l )
+				{	if ( s1.charAt(i) - s2.charAt(i) < 0 )
+					   {	firstIsBeforeSecond = true;
+					   		k = s1.charAt(i) - s2.charAt(i);
+					   		break;
+					   }
+					else if ( s1.charAt(i) - s2.charAt(i) > 0 )
+							{	firstIsBeforeSecond = false;
+								k = s1.charAt(i) - s2.charAt(i);
+								break;
+							}
+					i++;
+				}
+		System.out.println(k);
+	}
+}
+	
