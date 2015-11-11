@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class GenerateRandomDoubles
+{ public static void main(String[] args)
+	{	Scanner in = new Scanner(System.in);
+		System.out.println("Inserire un numero intero positivo: ");
+		double num = in.nextInt();
+		double z = num;
+		
+		while	( z != 0 )
+				{	num = num - Math.random();
+					System.out.println(num);
+					z--;
+				}
+	}
+}
+	
