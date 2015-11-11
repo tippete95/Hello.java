@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class IsPolindrome
+{	public static void main(String[] args)
+	{	Scanner in = new Scanner(System.in);
+		String s1 = in.nextLine();
+		String vuota = "";
+	
+		for	( int i = 0; i < s1.length(); i++ )
+		{	char ch = s1.charAt(i);
+			vuota = ch + vuota;
+		}
+			if ( vuota.equalsIgnoreCase(s1) )
+			{	System.out.println("Polindromo");
+			}
+			
+			else
+			{	System.out.println("Non polindromo");
+			}
+		
+	}
+}
