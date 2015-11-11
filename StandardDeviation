@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class StandardDeviation
+{	public static void main(String[] args)
+	{	Scanner in = new Scanner(System.in);
+		int n = 0;
+		double B = 0;
+		double A = 0;
+		
+		System.out.println("Inserire una sequenza di numeri: ");
+		
+		while	(in.hasNextDouble())
+		{	double nextDouble = in.nextDouble();
+			B = B + nextDouble;
+			A = A + (nextDouble * nextDouble);
+			n++;
+		}
+		if	(n < 2)
+			System.out.println("Inserire almeno due numeri");
+		else
+		{	System.out.println("La deviazione standard e': " + Math.sqrt((A - B * B / n) / (n - 1)) );
+		}
+	}
+}
